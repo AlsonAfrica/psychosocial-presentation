@@ -8,7 +8,7 @@ function App() {
 
   return (
     <>
-      <HeroSection />
+      {/* <HeroSection /> */}
 
       <section id="section1">
        <HeroSection />
