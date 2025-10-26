@@ -21,7 +21,7 @@ const HeroSection: React.FC = () => {
                 </p>
                 <div className='hero-buttons'>
                     <button className='hero-button-1'>Explore the Project</button>
-                    <button className='hero-button-2'>Meet the Team</button>
+                    <button className='hero-button-2'>Download action guide</button>
                 </div>
             </div>
 
