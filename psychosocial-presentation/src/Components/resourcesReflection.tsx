@@ -38,7 +38,7 @@ const ResourcesReflection: React.FC = () => {
             <div className="resources-section">
               <div className="section-header">
                 <div className="section-indicator">Action</div>
-                <h2 className="section-title">Quick action guide</h2>
+                <h2 className="section-title">Quick Action Guide</h2>
                 <p className="section-description">Tools, references, and a short reflective synthesis</p>
               </div>
 
@@ -72,7 +72,7 @@ const ResourcesReflection: React.FC = () => {
             <div className="resources-section">
               <div className="section-header">
                 <div className="section-indicator">Theory</div>
-                <h2 className="section-title">Reflection — tying theory to practice</h2>
+                <h2 className="section-title">Reflection — Tying Theory To Practice</h2>
               </div>
 
               <div className="reflection-content">

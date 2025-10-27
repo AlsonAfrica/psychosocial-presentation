@@ -81,8 +81,9 @@
   }
 
   .card-back {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
+    background-color: #d4a373;
+    /* background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); */
+    color: rgba(15, 15, 15, 0.233);
     transform: rotateY(180deg);
   }
 

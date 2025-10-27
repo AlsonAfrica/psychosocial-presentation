@@ -1,7 +1,8 @@
 // componentboiler plate
 import React from 'react';
 import '../Styles/heroSection.css';
-import { Volume2, Handshake, Globe } from "lucide-react";
+import actionGuide from "../assets/Quick Action Guide.pdf"
+import { Volume2, Handshake, Globe,} from "lucide-react";
 
 const HeroSection: React.FC = () => {
 
@@ -10,6 +11,10 @@ const HeroSection: React.FC = () => {
     { icon: <Handshake size={40} />, title: "Participatory Practice" },
     { icon: <Globe size={40} />, title: "Dissemination & Stakeholders" },
   ];
+
+const DownloadDoc = () => {
+  window.open(actionGuide, '_blank');
+}
 
     return (
         <section className="hero-section">
@@ -21,7 +26,7 @@ const HeroSection: React.FC = () => {
                 </p>
                 <div className='hero-buttons'>
                     <button className='hero-button-1'>Explore the Project</button>
-                    <button className='hero-button-2'>Download action guide</button>
+                    <button className='hero-button-2' onClick={DownloadDoc}> Download action guide</button>
                 </div>
             </div>
 
