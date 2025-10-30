@@ -1,113 +1,65 @@
-import React, { useState } from 'react';
-import "../Styles/resourcesReflection.css"
+// import React from 'react';
+import '../Styles/resourcesReflection.css';
 
-interface ResourceItem {
-  id: number;
-  text: string;
-  type: 'action' | 'reflection';
-}
 
-const ResourcesReflection: React.FC = () => {
-  const [expandedSection, setExpandedSection] = useState<'quick' | 'reflection' | null>(null);
-
-  const quickActionItems: ResourceItem[] = [
-    { id: 1, text: "Educate within your circle", type: 'action' },
-    { id: 2, text: "Amplify affected voices ethically", type: 'action' },
-    { id: 3, text: "Partner with local organisations", type: 'action' },
-    { id: 4, text: "Avoid inflammatory language", type: 'action' },
-    { id: 5, text: "Document and share responsibly", type: 'action' }
-  ];
-
-  const toggleSection = (section: 'quick' | 'reflection') => {
-    setExpandedSection(expandedSection === section ? null : section);
-  };
-
+export function ContentSection() {
   return (
-    <>
-      <div className="resources-wrapper">
-        <div className="resources-container">
-          <div className="resources-header">
-            <h1 className="resources-title">Resources & Reflection</h1>
-            <p className="resources-subtitle">
-              Tools, references, and a short reflective synthesis
-            </p>
+    <section className="content-section">
+      <div className="content-container">
+        <div className="content-grid">
+          {/* Left Card - About this project */}
+          <div className="content-card">
+            <div className="card-header">
+              <h2 className="card-title">About this project</h2>
+            </div>
+            <div className="card-content">
+              <p>
+                This website is the creative output for a Community Psychology Honours project which explores racism and
+                xenophobia in South Africa. It combines scholarly theory, government and civil-society reports, and
+                first-person narratives to:
+              </p>
+              <ul className="card-list">
+                <li>Explain the ways in which racism and xenophobia operates in South African social life</li>
+                <li>Demonstrate interventions and organisations that are striving to reduce harm</li>
+                <li>Share practical tools for students and community actors to act ethically and effectively</li>
+              </ul>
+            </div>
           </div>
 
-          <div className="resources-content">
-            {/* Quick Action Guide Section */}
-            <div className="resources-section">
-              <div className="section-header">
-                <div className="section-indicator">Action</div>
-                <h2 className="section-title">Quick Action Guide</h2>
-                <p className="section-description">Tools, references, and a short reflective synthesis</p>
-              </div>
-
-              <ul className="quick-actions-list">
-                {quickActionItems.map((item) => (
-                  <li key={item.id} className="action-item">
-                    <span className="action-bullet"></span>
-                    <span className="action-text">{item.text}</span>
-                  </li>
-                ))}
-              </ul>
-
-              {expandedSection === 'quick' && (
-                <div className="expanded-content">
-                  <p className="reflection-content">
-                    Each of these actions contributes to building a more inclusive and equitable community. 
-                    Start small and build momentum through consistent practice.
-                  </p>
-                </div>
-              )}
-
-              <button 
-                className="expand-button"
-                onClick={() => toggleSection('quick')}
-              >
-                {expandedSection === 'quick' ? 'Show Less' : 'Learn More'}
-              </button>
+          {/* Right Card - Theoretical frame */}
+          <div className="content-card">
+            <div className="card-header">
+              <h2 className="card-title">Theoretical frame</h2>
             </div>
-
-            {/* Reflection Section */}
-            <div className="resources-section">
-              <div className="section-header">
-                <div className="section-indicator">Theory</div>
-                <h2 className="section-title">Reflection — Tying Theory To Practice</h2>
-              </div>
-
-              <div className="reflection-content">
-                <p className="reflection-intro">
-                  Community psychology asks not only "what is happening?" but "who benefits?" and 
-                  "how can interventions change structures of power?"
+            <div className="card-content">
+              <p>
+                This project applies the Community Psychology value-based praxis model (Riemer, 2020), which focuses on
+                power, participation, and dissemination. Guided by these principles, the project centres affected
+                voices, examines who benefits when stories are told, and promotes collective action for justice.
+              </p>
+              <p>
+                For an overview of these value-based approaches, see:{" "}
+                <a
+                  href="https://www.proquest.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="card-link"
+                >
+                  ProQuest Ebook Central - Book Details
+                </a>
+              </p>
+              <div className="card-footer">
+                <p>
+                  <strong>Psychology Honours Student:</strong> Lerato Nkosi (24894583)
                 </p>
-
-                {expandedSection === 'reflection' && (
-                  <div className="expanded-content">
-                    <div className="reflection-quote">
-                      "True change requires examining the systems that perpetuate inequality, 
-                      not just addressing individual instances of harm."
-                    </div>
-                    <p>
-                      By connecting theory to practice, we move beyond surface-level solutions 
-                      to address root causes. This requires ongoing reflection on how our interventions 
-                      either challenge or reinforce existing power structures.
-                    </p>
-                  </div>
-                )}
+                <p>
+                  <strong>Module:</strong> Community Psychology 71
+                </p>
               </div>
-
-              <button 
-                className="expand-button"
-                onClick={() => toggleSection('reflection')}
-              >
-                {expandedSection === 'reflection' ? 'Show Less' : 'Read More'}
-              </button>
             </div>
           </div>
         </div>
       </div>
-    </>
+    </section>
   );
-};
-
-export default ResourcesReflection;
+}

@@ -1,222 +1,134 @@
-   .resources-wrapper {
-          background-color: #f9f9f7;
-          padding: 3rem 2rem;
-          font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-          min-height: 100vh;
-        }
+.content-section {
+  padding: 5rem 1.5rem;
+  background-color: #fafafa;
+}
 
-        .resources-container {
-          max-width: 1200px;
-          margin: 0 auto;
-        }
+.content-container {
+  max-width: 72rem;
+  margin: 0 auto;
+}
 
-        .resources-header {
-          margin-bottom: 2.5rem;
-        }
+.content-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
 
-        .resources-title {
-          font-size: 2rem;
-          font-weight: 400;
-          color: #1a1a1a;
-          margin-bottom: 0.75rem;
-          letter-spacing: -0.5px;
-        }
+.content-card {
+  border: 2px solid #763f20;
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.6s ease-out forwards;
+}
 
-        .resources-subtitle {
-          font-size: 1rem;
-          color: #4a4a4a;
-          font-weight: 400;
-          line-height: 1.6;
-        }
+.content-card:nth-child(1) {
+  animation-delay: 0.2s;
+}
 
-        .resources-content {
-          display: grid;
-          grid-template-columns: 1fr 1fr;
-          gap: 3rem;
-          margin-top: 2rem;
-        }
+.content-card:nth-child(2) {
+  animation-delay: 0.4s;
+}
 
-        .resources-section {
-          background-color: #ffffff;
-          border-radius: 12px;
-          padding: 2rem;
-          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
-          transition: box-shadow 0.3s ease;
-        }
+.content-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
-        .resources-section:hover {
-          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        }
+.card-header {
+  padding: 1.5rem;
+  border-bottom: 1px solid rgba(118, 63, 32, 0.1);
+}
 
-        .section-header {
-          margin-bottom: 1.5rem;
-        }
+.card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #763f20;
+}
 
-        .section-title {
-          font-size: 1.25rem;
-          font-weight: 600;
-          color: #1a1a1a;
-          margin-bottom: 0.5rem;
-        }
+.card-content {
+  padding: 1.5rem;
+  color: #763f20;
+  line-height: 1.75;
+}
 
-        .section-description {
-          font-size: 0.9rem;
-          color: #666;
-          line-height: 1.5;
-          margin-top: 0.5rem;
-        }
+.card-content p {
+  margin-bottom: 1rem;
+}
 
-        .section-indicator {
-          display: inline-block;
-          font-size: 0.75rem;
-          text-transform: uppercase;
-          letter-spacing: 0.5px;
-          color: #667eea;
-          font-weight: 600;
-          margin-bottom: 0.5rem;
-        }
+.card-content p:last-child {
+  margin-bottom: 0;
+}
 
-        .quick-actions-list {
-          list-style: none;
-          padding: 0;
-          margin: 0;
-        }
+.card-list {
+  list-style-type: disc;
+  list-style-position: inside;
+  margin-left: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
 
-        .action-item {
-          display: flex;
-          align-items: flex-start;
-          padding: 0.75rem 0;
-          border-bottom: 1px solid #f0f0f0;
-          transition: background-color 0.2s ease;
-        }
+.card-list li {
+  margin-bottom: 0.5rem;
+}
 
-        .action-item:last-child {
-          border-bottom: none;
-        }
+.card-link {
+  text-decoration: underline;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
 
-        .action-item:hover {
-          background-color: #f9f9f9;
-          padding-left: 0.5rem;
-          margin-left: -0.5rem;
-          padding-right: 0.5rem;
-          border-radius: 6px;
-        }
+.card-link:hover {
+  color: #a0522d;
+}
 
-        .action-bullet {
-          width: 8px;
-          height: 8px;
-          background-color: #667eea;
-          border-radius: 50%;
-          margin-right: 1rem;
-          margin-top: 0.5rem;
-          flex-shrink: 0;
-        }
+.card-footer {
+  padding-top: 1rem;
+  margin-top: 1.5rem;
+  border-top: 1px solid rgba(118, 63, 32, 0.3);
+}
 
-        .action-text {
-          font-size: 0.95rem;
-          color: #2d3748;
-          line-height: 1.6;
-        }
+.card-footer p {
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+}
 
-        .reflection-content {
-          font-size: 0.95rem;
-          color: #2d3748;
-          line-height: 1.7;
-        }
+.card-footer strong {
+  font-weight: 600;
+}
 
-        .reflection-intro {
-          font-weight: 500;
-          margin-bottom: 1rem;
-          color: #1a1a1a;
-        }
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
-        .reflection-quote {
-          font-style: italic;
-          color: #4a5568;
-          padding-left: 1rem;
-          border-left: 3px solid #667eea;
-          margin: 1rem 0;
-        }
+/* Responsive styles */
+@media (min-width: 768px) {
+  .content-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 
-        .expand-button {
-          margin-top: 1rem;
-          background: none;
-          border: 1px solid #e2e8f0;
-          padding: 0.5rem 1rem;
-          border-radius: 6px;
-          color: #667eea;
-          font-size: 0.875rem;
-          cursor: pointer;
-          transition: all 0.2s ease;
-          font-weight: 500;
-        }
-
-        .expand-button:hover {
-          background-color: #f7fafc;
-          border-color: #667eea;
-        }
-
-        .expanded-content {
-          margin-top: 1rem;
-          padding-top: 1rem;
-          border-top: 1px solid #f0f0f0;
-          animation: fadeIn 0.3s ease-in;
-        }
-
-        @keyframes fadeIn {
-          from {
-            opacity: 0;
-            transform: translateY(-10px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-          .resources-wrapper {
-            padding: 2rem 1rem;
-          }
-
-          .resources-title {
-            font-size: 1.5rem;
-          }
-
-          .resources-subtitle {
-            font-size: 0.9rem;
-          }
-
-          .resources-content {
-            grid-template-columns: 1fr;
-            gap: 1.5rem;
-          }
-
-          .resources-section {
-            padding: 1.5rem;
-          }
-
-          .section-title {
-            font-size: 1.1rem;
-          }
-        }
-
-        @media (max-width: 480px) {
-          .resources-wrapper {
-            padding: 1.5rem 1rem;
-          }
-
-          .resources-title {
-            font-size: 1.25rem;
-          }
-
-          .resources-section {
-            padding: 1.25rem;
-          }
-
-          .action-text,
-          .reflection-content {
-            font-size: 0.875rem;
-          }
-        }
+@media (max-width: 767px) {
+  .content-section {
+    padding: 3rem 1rem;
+  }
+  
+  .card-header,
+  .card-content {
+    padding: 1rem;
+  }
+  
+  .card-title {
+    font-size: 1.25rem;
+  }
+}

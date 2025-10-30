@@ -1,29 +1,42 @@
 import './App.css'
-import HeroSection from './Components/heroSection'
-import Main from './Components/main'
-import ResourcesReflection from './Components/resourcesReflection'
-import FloatingLeavesFooter from './Components/footer'
+// import HeroSection from './Components/heroSection'
+import { HeroSection } from './Components/heroSection'
+import { StickyNavbar } from './Components/navbar'
+import { ContentSection } from './Components/resourcesReflection'
+import { StoriesInterventionsSection } from './Components/storiesIntervention'
+// import ResourcesReflection from './Components/resourcesReflection'
+import { FooterWithReferences } from './Components/footer'
+import { KeyTermsSection } from './Components/key'
+import { ResourcesReflectionSection } from './Components/resourceReflection'
 
 function App() {
 
   return (
     <>
       {/* <HeroSection /> */}
-
+     <HeroSection />
       <section id="section1">
-       <HeroSection />
+        <StickyNavbar />
       </section>
 
       <section id="section">
-       <Main />
+       <ContentSection/>
       </section>
      
       <section id="section2">
-        <ResourcesReflection/>
+        <KeyTermsSection />
+      </section>
+
+      <section id="section4">
+        <StoriesInterventionsSection/>
+      </section>
+
+      <section id="section5">
+        <ResourcesReflectionSection/>
       </section>
       
       <section id="section3">
-        <FloatingLeavesFooter/>
+        <FooterWithReferences/>
       </section>
      
     </>
