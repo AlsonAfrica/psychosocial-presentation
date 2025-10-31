@@ -23,9 +23,9 @@ export function HeroSection() {
           A community-psychology honours project using lived narratives, practical tools and research to understand and
           interrupt racialised scapegoating and exclusion
         </h1>
-        <button className="hero-button">
+        {/* <button className="hero-button">
           Explore the Project
-        </button>
+        </button> */}
       </div>
     </section>
   );
