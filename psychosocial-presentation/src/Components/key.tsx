@@ -79,7 +79,7 @@ export function KeyTermsSection() {
               </div>
               <div className="keyterms-card-content">
                 <p className="card-text">
-                  Structural inequalities in access to resources and opportunities that appear "normal."
+                  Structural inequalities in access to resources and opportunities becomes part of everyday systems and seems “normal.”
                 </p>
               </div>
             </div>
