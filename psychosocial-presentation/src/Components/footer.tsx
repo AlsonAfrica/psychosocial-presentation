@@ -42,7 +42,7 @@ export function FooterWithReferences() {
           <div className="footer-content">
             <div className="footer-info">
               <p className="footer-copyright">© 2025 Community Psychology Honours Project</p>
-              <p className="footer-student">Lerato Nkosi (24894583) | Community Psychology 711</p>
+              <p className="footer-student">Lerato Nkosi (24894583) | Community Psychology 714</p>
             </div>
 
             <button

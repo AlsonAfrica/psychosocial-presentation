@@ -53,7 +53,7 @@ export function ContentSection() {
                   <strong>Psychology Honours Student:</strong> Lerato Nkosi (24894583)
                 </p>
                 <p>
-                  <strong>Module:</strong> Community Psychology 71
+                  <strong>Module:</strong> Community Psychology 
                 </p>
               </div>
             </div>

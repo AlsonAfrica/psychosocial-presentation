@@ -1,5 +1,6 @@
 // import React from 'react';
 import '../Styles/resourceReflection.css';
+import guide from "../assets/Quick Action Guide.pdf"
 
 export function ResourcesReflectionSection() {
   return (
@@ -16,9 +17,9 @@ export function ResourcesReflectionSection() {
           <div className="resources-card">
             <div className="action-header">
               <h3 className="action-title">Quick Action Guide</h3>
-              <button className="action-button">
+              <a href={guide} download className="action-button">
                 Download PDF
-              </button>
+              </a>
             </div>
             <p className="action-intro">Five ways students or small groups can act ethically and safely:</p>
 
@@ -235,7 +236,7 @@ export function ResourcesReflectionSection() {
         {/* Footer Credit */}
         <div className="resources-footer">
           <p>Psychology Honours Student: Lerato Nkosi (24894583)</p>
-          <p>Module: Community Psychology 71</p>
+          <p>Module: Community Psychology 714</p>
         </div>
       </div>
     </section>
